@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    perspective: 1000px; /* Добавляем перспективу для 3D эффекта */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #00796b;
+    margin-bottom: 20px;
+    transform: translateZ(50px); /* Добавляем эффект глубины */
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) translateZ(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateZ(50px);
+    }
+}
+
+#map-container {
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d; /* Сохраняем 3D преобразования для дочерних элементов */
+}
+
+#mapImage {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    transform: translateZ(30px); /* Добавляем эффект глубины */
+}
+
+#mapImage:hover {
+    transform: scale(1.05) translateZ(30px); /* Добавляем эффект глубины при наведении */
+}
+
+.marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    display: none;
+    animation: pulse 1s infinite;
+    transform: translateZ(40px); /* Добавляем эффект глубины */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95) translateZ(40px);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.1) translateZ(40px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0.95) translateZ(40px);
+        opacity: 1;
+    }
+}
+
+.controls {
+    margin: 20px 0;
+    transform: translateZ(20px); /* Добавляем эффект глубины */
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.05) translateZ(20px); /* Добавляем эффект глубины при наведении */
+}
+
+#info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    display: none;
+    animation: fadeIn 0.5s;
+    transform: translateZ(10px); /* Добавляем эффект глубины */
+}
+
+#info.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) translateZ(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateZ(10px);
+    }
+}

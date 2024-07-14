@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследуйте Мир</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Исследуйте Мир с Нашей Интерактивной Картой</h1>
+        <div id="map-container">
+            <img id="mapImage" src="05dc5e9e9c37b72948d0552991f749ac-2755574939.jpg" alt="Карта мира">
+            <div id="marker" class="marker"></div>
+        </div>
+        <div class="controls">
+            <button onclick="showInfo('Азия', {x: 680, y: 160})">Азия</button>
+            <button onclick="showInfo('Европа', {x: 500, y: 100})">Европа</button>
+            <button onclick="showInfo('Северная Америка', {x: 120, y: 100})">Северная Америка</button>
+            <button onclick="showInfo('Южная Америка', {x: 200, y: 475})">Южная Америка</button>
+            <button onclick="showInfo('Африка', {x: 470, y: 340})">Африка</button>
+            <button onclick="showInfo('Австралия', {x: 800, y: 530})">Австралия</button>
+            <button onclick="showInfo('Антарктида', {x: 512, y: 730})">Антарктида</button>
+        </div>
+        <div id="info"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.log
+*.tmp
+dist/
+build/
+node_modules/
+*.swp
+*.bak
+*.backup
+*.orig
+.env
+.env.local
